@@ -28,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "postcss-loader": "^2.1.6",
     "react": "^16.4.1",
     "redux": "^4.0.0",
     "webpack": "^4.16.1"
