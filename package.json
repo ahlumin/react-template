@@ -1,0 +1,24 @@
+{
+  "name": "easy-react-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahlumin/easy-react-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahlumin/easy-react-template/issues"
+  },
+  "homepage": "https://github.com/ahlumin/easy-react-template#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "redux": "^4.0.0",
+    "webpack": "^4.16.1"
+  }
+}
