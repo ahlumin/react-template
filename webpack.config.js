@@ -2,13 +2,25 @@ const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const OUTPUT_PATH = (ENV) => {
+  switch(ENV) {
+    case 'production':
+      return path.resolve(__dirname, 'production');
+      break;
+    case 'development':
+    default:
+      return path.resolve(__dirname, 'dev');
+      break;
+  }
+}
+
 const config = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     main: 'main'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: OUTPUT_PATH(process.env.NODE_ENV),
     filename: 'js/[name].js?[hash:8]',
     publicPath: "/"
   },
@@ -100,7 +112,7 @@ const config = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['dist'] }
+      server: { baseDir: ['dev'] }
     })
   ]
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch"
+    "dev": "set NODE_ENV=development&webpack --watch"
   },
   "repository": {
     "type": "git",
