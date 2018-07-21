@@ -33,6 +33,22 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(sass|scss)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[hash:8]_[local]',
+            },
+          },
+          'postcss-loader',
+          'sass-loader'
+        ],
+        include: path.resolve('src'),
+      },
+      {
         test: /\.(js)$/,
         use: 'babel-loader',
         include: path.resolve('src')
