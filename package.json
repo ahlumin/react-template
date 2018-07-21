@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ahlumin/easy-react-template#readme",
   "dependencies": {
     "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "redux": "^4.0.0"
   },
   "devDependencies": {
