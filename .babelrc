@@ -1,9 +1,8 @@
 {
   "presets": [
-    "stage-2",
-    "react",
+    "@babel/preset-react",
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "browsers": [
@@ -19,15 +18,8 @@
     ]
   ],
   "plugins": [
-    "babel-plugin-transform-class-properties",
-    "transform-async-to-generator",
-    "transform-export-extensions",
-    [
-      "transform-runtime",
-      {
-        "polyfill": false,
-        "regenerator": true
-      }
-    ]
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime"
   ]
 }
