@@ -46,7 +46,22 @@ const config = {
             },
           },
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
+        ],
+        include: path.resolve('src'),
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[hash:8]_[local]',
+            },
+          },
+          'postcss-loader',
         ],
         include: path.resolve('src'),
       },
