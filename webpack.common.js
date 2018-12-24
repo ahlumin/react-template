@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
   context: path.resolve(__dirname, 'src'),
@@ -67,6 +68,12 @@ const config = {
         to: path.resolve(__dirname, 'dist/assets')
       }
     ]),
+    new CleanWebpackPlugin([
+      'dist',
+    ], {
+      root: __dirname,
+      verbose: true,
+    }),
   ]
 };
 
