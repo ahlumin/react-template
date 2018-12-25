@@ -8,6 +8,7 @@ module.exports = merge(common, {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
+      online: true,
       server: { baseDir: ['dist'] }
     }),
   ],
