@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from 'scenes/Home';
+import App from './app.js';
 
 import 'assets/styles/reset.css';
 
 ReactDOM.render(
-  <Home />,
+  <App />,
   document.getElementById('root'),
 );
