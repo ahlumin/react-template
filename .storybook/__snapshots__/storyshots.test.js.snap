@@ -8,6 +8,22 @@ exports[`Storyshots Home a normal component 1`] = `
 </div>
 `;
 
+exports[`Storyshots Loading the default 1`] = `
+Object {
+  "$$typeof": Symbol(react.portal),
+  "children": <div
+    className="container"
+  >
+    LOADING
+  </div>,
+  "containerInfo": <div
+    id="modal"
+  />,
+  "implementation": null,
+  "key": null,
+}
+`;
+
 exports[`Storyshots SlideBar a normal component 1`] = `
 <div
   className="slider"

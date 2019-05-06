@@ -1,29 +1,26 @@
-const path = require('path');
+const path = require("path");
 
-module.exports = (storybookBaseConfig, configType, defaultConfig) => {
-  defaultConfig.resolve = {
-    modules: [
-      path.resolve('node_modules'),
-      path.resolve('src'),
-    ],
-    extensions: ['.js'],
+module.exports = async ({ config }) => {
+  config.resolve = {
+    modules: [path.resolve("node_modules"), path.resolve("src")],
+    extensions: [".js"]
   };
-  
-  defaultConfig.module.rules.push({
+
+  config.module.rules.push({
     test: /\.scss$/,
     use: [
-      'style-loader',
+      "style-loader",
       {
-        loader: 'css-loader',
+        loader: "css-loader",
         options: {
           modules: true,
-          localIdentName: '[hash:8]_[local]',
-        },
+          localIdentName: "[hash:8]_[local]"
+        }
       },
-      'postcss-loader',
-      'sass-loader'
-    ],
+      "postcss-loader",
+      "sass-loader"
+    ]
   });
 
-  return defaultConfig;
+  return config;
 };
