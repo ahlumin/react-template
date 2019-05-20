@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Home
-} from 'scenes';
+} from 'containers';
 
 export default class App extends React.Component {
   render() {
