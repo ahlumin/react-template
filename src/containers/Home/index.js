@@ -3,12 +3,8 @@ import classnames from 'classnames/bind';
 import style from './style.scss';
 const cx = classnames.bind(style);
 
-export default class Home extends React.Component {
-  render() {
-    return (
-      <div className={cx('main')}>
-        From App Yo.!
-      </div>
-    )
-  }
-}
+const Home = () => {
+  return <div className={cx('home')}>From App Yo.!</div>;
+};
+
+export default Home;
